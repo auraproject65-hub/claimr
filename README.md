@@ -10,10 +10,10 @@ Install dependencies:
 npm install
 ```
 
-Run development server:
+Run development server on port 5000:
 
 ```bash
-npm run dev
+npm run dev -- --port 5000
 ```
 
 Build for production:

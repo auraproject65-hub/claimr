@@ -1,5 +1,7 @@
+import Link from 'next/link';
 import { Button } from '../components/Button';
 import { Footer } from '../components/Footer';
+import { Navbar } from '../components/Navbar';
 
 const features = [
   {
@@ -44,6 +46,7 @@ const pricing = [
 export default function Home() {
   return (
     <main className="min-h-screen overflow-hidden bg-hero-gradient text-slate-100">
+      <Navbar />
       <div className="mx-auto max-w-7xl px-6 pb-20 pt-14 lg:px-8">
         <header className="flex flex-col gap-6 sm:flex-row sm:items-center sm:justify-between">
           <div>
@@ -57,8 +60,12 @@ export default function Home() {
               Claimr brings hidden monetization programs, bonus pools, and reward triggers into one premium dashboard with AI mission guidance and automated enrollment.
             </p>
             <div className="mt-8 flex flex-col gap-4 sm:flex-row">
-              <Button>Start free</Button>
-              <Button variant="ghost">See pricing</Button>
+              <Link href="/dashboard">
+                <Button>View dashboard</Button>
+              </Link>
+              <Link href="/connect">
+                <Button variant="ghost">Connect platforms</Button>
+              </Link>
             </div>
           </div>
           <div className="rounded-[32px] border border-white/10 bg-slate-950/70 p-8 shadow-glow backdrop-blur-xl">
